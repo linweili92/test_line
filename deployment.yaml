@@ -19,3 +19,5 @@ spec:
           name: search-api
           ports:
             - containerPort: 8081
+          imagePullSecrets:
+            - name: hb2
