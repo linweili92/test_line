@@ -1,0 +1,15 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: search-api
+  namespace: carhouse-test
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - image: 192.168.6.30/carhouse/search-api:3.0.0-SNAPSHOT
+          imagePullPolicy: Always
+          name: search-api
+          ports:
+            - containerPort: 8081
