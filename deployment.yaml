@@ -5,10 +5,13 @@ metadata:
   namespace: carhouse-test
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: search-api
   template:
     metadata:
       labels:
-        app: carhouse-test
+        app: search-api
     spec:
       containers:
         - image: 192.168.6.30/carhouse/search-api:3.0.0-SNAPSHOT
