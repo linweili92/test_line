@@ -1,0 +1,12 @@
+stages:
+- name: maven打包
+  steps:
+  - runScriptConfig:
+      image: python:latest
+      shellScript: print(123)
+  when:
+    branch:
+      include:
+      - master
+timeout: 60
+notification: {}
