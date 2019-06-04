@@ -1,2 +1,12 @@
+stages:
+- name: compile
+  steps:
+  - runScriptConfig:
+      image: maven:v1
+      shellScript: mvn clean package
+- name: deploy
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
 timeout: 60
 notification: {}
