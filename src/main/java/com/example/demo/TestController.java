@@ -9,6 +9,6 @@ public class TestController {
 
     @RequestMapping("/")
     public String tet(){
-        return "test 123 ok3!";
+        return "test 456 ok3!";
     }
 }
